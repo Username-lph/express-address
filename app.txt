@@ -1,0 +1,6 @@
+此文从Github上下载下来，是要在node.js 控制台输入
+//npm init  如果里面有package.json这个文件夹，此步骤可以省略；
+2.npm install express --save
+3.npm install mysql --save
+4.npm install body-parser
+5.分别安装这些插件，具体操作可以登录https://www.npmjs.com/package/body-parser官网，可以查看其用法.
