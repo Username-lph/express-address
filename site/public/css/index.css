@@ -67,7 +67,7 @@
 }
 
 .letter {
-	width: 1.5rem;
+	width: 1.3rem;
 	height: 1.5rem;
 	background: #dfdfdf;
 	position: fixed;
@@ -75,6 +75,9 @@
 	top: 0;
 	bottom: 0;
 	margin: auto;
+	border-radius:0.8rem;
+	text-align:center;
+	font-size:12px;
 }
 
 .letter div {
