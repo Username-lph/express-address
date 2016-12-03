@@ -2,6 +2,7 @@ var express = require("express");
 var app = express();
 var mysql = require('mysql');
 var bodyParser = require('body-parser');
+var pinyin = require('pinyin');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
 	extended: false
@@ -20,6 +21,9 @@ app.listen(3000, function() {
 });
 app.get('/admin', function(req, res) {
 	res.sendFile(__dirname + '/site/index.html');
+});
+app.get('/', function(req, res) {
+	res.sendFile(__dirname + '/site/admin.html');
 });
 app.use(express.static(__dirname + '/site/public'));
 
@@ -46,21 +50,21 @@ app
 	})
 	.put('/user', function(req, res) {
 		if(req.body.name) {
-			var sql = 'update address set name=? where id=?';
-			con.query(sql, [req.body.name, req.body.id], function(err, r) {
+			var name = req.body.name;
+			var o = pinyin(name, {
+				style: pinyin.STYLE_NORMAL
+			}).join(' ');
+			var sql = 'update address set name=?,pinyin=? where id =?';
+			con.query(sql, [name, o, req.body.id], function(err, r) {
 				if(!err) {
-					res.json({
-						state: 'ok'
-					});
+					res.json(r.name);
 				}
-			});
+			})
 		} else if(req.body.phone) {
 			var sql = 'update address set phone=? where id=?';
 			con.query(sql, [req.body.phone, req.body.id], function(err, r) {
 				if(!err) {
-					res.json({
-						state: 'ok'
-					});
+					res.json(r.phone);
 				}
 			})
 		}

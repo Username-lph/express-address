@@ -1,24 +1,98 @@
-h1 {
-	margin: 0.9rem auto;
-	color: #c81623;
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-#id,
-#name,
-#phone,
-#delete,
-td.id {
-	vertical-align: middle;
+.header {
+	width: 100%;
+	height: 2rem;
+	background: #101010;
+}
+
+.title {
+	width: 100%;
+	height: 4rem;
+	background: #C9C9CE;
+	position: fixed;
+}
+
+.title .search {
+	display: block;
+	width: 80%;
+	height: 3rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	border: 1px solid #269ABC;
+	border-radius: 0.5rem;
+	padding-left: 0.5rem;
+}
+
+.content {
+	padding-top: 48px;
+}
+
+#contact {
+	/*padding: 0 10px 0 20px;*/
+}
+
+#contact dt {
+	width: 100%;
+	height: 2.5rem;
+	padding-left: 1.5rem;
+	background: #F2F2F2;
+	line-height: 2.6rem;
+}
+
+#contact dd {
+	width: 91.5%;
+	height: 40px;
+	line-height: 40px;
+	margin: 0 auto;
+	border-bottom: 1px solid #D9D9D9;
+}
+
+#contact dd a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.letter {
+	width: 1.5rem;
+	height: 1.5rem;
+	background: #dfdfdf;
+	position: fixed;
+	right: 0.1rem;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.letter div {
+	height: 1.8rem;
+	line-height: 1.8rem;
 	text-align: center;
+	color: cornflowerblue;
+	padding-top:0.3rem;
+	padding-bottom:0.3rem;
 }
 
-#delete {
-	color: #ff0000;
-	cursor: pointer;
-}
-
-td.delete {
-	vertical-align: middle;
-	text-align: center;
-	cursor: pointer;
+#tip {
+	z-index: 99999;
+	position: fixed;
+	top: 48px;
+	padding-left: 20px;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	background: #D9D9D9;
 }

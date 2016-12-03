@@ -1,0 +1,24 @@
+h1 {
+	margin: 0.9rem auto;
+	color: #c81623;
+}
+
+#id,
+#name,
+#phone,
+#delete,
+td.id {
+	vertical-align: middle;
+	text-align: center;
+}
+
+#delete {
+	color: #ff0000;
+	cursor: pointer;
+}
+
+td.delete {
+	vertical-align: middle;
+	text-align: center;
+	cursor: pointer;
+}

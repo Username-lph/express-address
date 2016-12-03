@@ -3,32 +3,47 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
-		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.5/css/bootstrap-flex.css" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="red">
+		<meta name="apple-mobile-web-app-title" content="手机联系人">
+		<link rel="apple-touch-icon" href="/image/logo.png">
+		
+		 <!-- Add to homescreen for Chrome on Android -->
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="application-name" content="手机联系人">
+		<meta name="theme-color" content="red">
+		<link rel="icon" sizes="192x192" href="/image/logo.png">
+		
+		<title>index</title>
+		<link rel="stylesheet" href="/css/bootstrap.css" />
 		<link rel="stylesheet" href="/css/index.css" />
-		<script src="https://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
-		<script src="/js/index.js"></script>
+		<script type="text/javascript" src="/js/jquery.min.js"></script>
+		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/js/index.js"></script>
+
 	</head>
 
 	<body>
-
-		<div class="container">
-			<div class="row">
-				<h1>通讯录</h1>
-				<table class="table">
-					<thead>
-						<tr>
-							<th id="id">id</th>
-							<th id="name">姓名</th>
-							<th id="phone">电话</th>
-							<th id="delete">删除</th>
-						</tr>
-					</thead>
-					<tbody>
-					</tbody>
-				</table>
-				<div class="btn btn-primary" id="plus">+</div> 
-			</div>
+		<!--<div class="header"></div>-->
+		<div class="title">
+			<input type="text" class="search" value="搜索联系人"/>
+		</div>
+		<div id="tip"></div>
+		<!--content-->
+		<div class="content">
+			<dl id="contact">
+				<!--<dt>A</dt>
+				<dd>ab</dd>
+				<dt>B</dt>
+				<dd>ba</dd>-->
+			</dl>
+		</div>
+		<!--letter-->
+		<div class="letter" id="c-index">
+			<!--<div>A</div>
+			<div>B</div>
+			<div>C</div>-->
 		</div>
 	</body>
 
